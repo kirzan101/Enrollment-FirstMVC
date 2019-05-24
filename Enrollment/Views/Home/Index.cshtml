@@ -5,10 +5,10 @@
     ViewData["Title"] = title;
 }
 <h2>@title</h2>
-<h3><a asp-action="Create" class="btn btn-sm btn-secondary">Create</a></h3>
+<h3><a asp-action="Create" class="btn btn-success btn-sm">Create</a></h3>
 <table class="table table-bordered table-sm table-striped">
     <thead>
-        <tr>
+        <tr class="table-dark" >
             <th>Id</th>
             <th>Name</th>
             <th>Skills</th>
@@ -37,7 +37,7 @@
                     <td>@p.TotalStudents</td>
                     <td>@string.Format(new System.Globalization.CultureInfo("en-PH"), "{0:C2}", p.Salary)</td>
                     <td>@string.Format("{0:dddd, dd MMMM yyyy}", p.AddedOn)</td>
-                    <td><a asp-action="Update" asp-route-id="@p.Id" type="button" class="btn btn-info">Update</a></td>
+                    <td><a asp-action="Update" asp-route-id="@p.Id" class="btn btn-info">Update</a></td>
                     <td>
                         <form asp-action="Delete" method="post" asp-route-id="@p.Id">
                             <button class="btn btn-danger">Delete</button>
